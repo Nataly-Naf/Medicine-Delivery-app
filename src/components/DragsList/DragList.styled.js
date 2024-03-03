@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const ProductWrapper = styled.div`
-  width: 450px;
+  width: 470px;
   height: 450px;
   overflow: scroll;
   border: 1px solid black;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  border: 1px solid black;
+  padding: 10px;
 `;
 export const ProductImgWrapper = styled.div`
   width: 200px;

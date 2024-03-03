@@ -41,7 +41,7 @@ export const SubmitButton = styled.button`
   transition: all 0.3s ease;
   margin-top: 15px;
   position: absolute;
-  bottom: 0px;
+  bottom:150px;
   right: 310px;
   
 

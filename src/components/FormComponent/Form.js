@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import {
   FormWrapper,
   FormGroup,
@@ -7,47 +8,50 @@ import {
   Input,
   ErrorMsg,
   SubmitButton,
-} from './Form.styled.js';
+} from './Form.styled';
 
-export const FormComponent = ({ handleSubmit }) => {
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  phone: Yup.string().required('Phone is required'),
+  address: Yup.string().required('Address is required'),
+});
+
+export const FormComponent = ({ handleSubmit, hasItemsInCart }) => {
   return (
     <FormWrapper>
       <Formik
         initialValues={{ name: '', email: '', phone: '', address: '' }}
-        validate={values => {
-          const errors = {};
-          if (!values.name) {
-            errors.name = 'Required';
-          }
-          return errors;
-        }}
+        validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
           <Form>
             <FormGroup>
               <Label htmlFor="name">Name</Label>
-              <Field as={Input} type="text" name="name" />
+              <Field type="text" name="name" as={Input} />
               <ErrorMessage name="name" component={ErrorMsg} />
             </FormGroup>
             <FormGroup>
               <Label htmlFor="email">Email</Label>
-              <Field as={Input} type="email" name="email" />
+              <Field type="email" name="email" as={Input} />
               <ErrorMessage name="email" component={ErrorMsg} />
             </FormGroup>
             <FormGroup>
               <Label htmlFor="phone">Phone</Label>
-              <Field as={Input} type="text" name="phone" />
+              <Field type="text" name="phone" as={Input} />
               <ErrorMessage name="phone" component={ErrorMsg} />
             </FormGroup>
             <FormGroup>
               <Label htmlFor="address">Address</Label>
-              <Field as={Input} type="text" name="address" />
+              <Field type="text" name="address" as={Input} />
               <ErrorMessage name="address" component={ErrorMsg} />
             </FormGroup>
-            <SubmitButton type="submit" disabled={isSubmitting}>
-              Submit
-            </SubmitButton>
+            {hasItemsInCart && ( // Проверка наличия товаров в корзине
+              <SubmitButton type="submit" disabled={isSubmitting}>
+                Submit
+              </SubmitButton>
+            )}
           </Form>
         )}
       </Formik>

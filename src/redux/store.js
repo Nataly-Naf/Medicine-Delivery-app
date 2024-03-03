@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -10,25 +10,28 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { cartProductsReducer } from './cartProductsSlice';
+import { cartProductsReducer } from './cartProductsSlice.js';
 
 const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['cartProducts'],
 };
-
-const persistedCartReducer = persistReducer(persistConfig, cartProductsReducer);
+const persistedContactsReducer = persistReducer(
+  persistConfig,
+  cartProductsReducer
+);
 
 export const store = configureStore({
   reducer: {
-    cartProducts: persistedCartReducer,
+    cartProducts: persistedContactsReducer,
   },
-  middleware: getDefaultMiddleware({
-    serializableCheck: {
-      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    },
-  }),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
   devTools: process.env.NODE_ENV === 'development',
 });
 

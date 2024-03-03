@@ -8,6 +8,8 @@ export const CartProductsWrapper = styled.div`
 
   border: 1px solid black;
   background-color: white;
+  margin-top: 25px;
+  position: relative;
 `;
 export const StyledItem = styled.li`
   display: flex;
@@ -53,4 +55,10 @@ export const StyledButton = styled.button`
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+export const TotalPrice = styled.p`
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
 `;

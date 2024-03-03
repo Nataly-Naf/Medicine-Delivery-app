@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ShopItem } from 'components/ShopItem/ShopsItem';
-import { StyledShopsWrapper, StyledShopsList } from './ShopsList.styled';
+import { StyledShopsWrapper, StyledShopsList, Title } from './ShopsList.styled';
 import { DragList } from 'components/DragsList/DragList';
 import { nanoid } from 'nanoid';
 
@@ -46,6 +46,7 @@ export const ShopsList = () => {
   return (
     <>
       <StyledShopsWrapper>
+        <Title>Shops</Title>
         <StyledShopsList>
           {shops.map(shop => (
             <ShopItem

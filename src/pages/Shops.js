@@ -9,7 +9,6 @@ const styles = {
 export default function ShopsPage() {
   return (
     <>
-      <h1>Shops</h1>
       <div style={styles}>
         <ShopsList />
       </div>

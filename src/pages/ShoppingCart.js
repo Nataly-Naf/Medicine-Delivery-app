@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartProducts } from 'redux/selectors';
 import { removeAllFromCart } from 'redux/cartProductsSlice';
@@ -10,6 +10,9 @@ import Notiflix from 'notiflix';
 export default function CartPage() {
   const cartProducts = useSelector(selectCartProducts);
   const dispatch = useDispatch();
+  const [hasItemsInCart, setHasItemsInCart] = useState(cartProducts.length > 0);
+  console.log(setHasItemsInCart);
+
   const handleSubmit = async (values, actions) => {
     const formData = values;
 
@@ -44,8 +47,15 @@ export default function CartPage() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px' }}>
-      <FormComponent handleSubmit={handleSubmit} />
-      <ShoppingCart />
+      <FormComponent
+        handleSubmit={handleSubmit}
+        hasItemsInCart={hasItemsInCart}
+      />
+      {cartProducts.length > 0 ? (
+        <ShoppingCart />
+      ) : (
+        <p style={{ fontWeight: '600' }}>Your shoping cart is empty</p>
+      )}
     </div>
   );
 }

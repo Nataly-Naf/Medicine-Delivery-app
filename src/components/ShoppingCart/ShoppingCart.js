@@ -11,6 +11,7 @@ import {
   StyledItem,
   StyledButton,
   InfoWrapper,
+  TotalPrice,
 } from './ShoppingCart.styled';
 export const ShoppingCart = () => {
   const dispatch = useDispatch();
@@ -49,7 +50,6 @@ export const ShoppingCart = () => {
                   handleQuantityChange(e.target.value, product._id)
                 }
               />
-
               <StyledButton onClick={() => handleRemoveFromCart(product._id)}>
                 Remove
               </StyledButton>
@@ -57,7 +57,7 @@ export const ShoppingCart = () => {
           </StyledItem>
         ))}
       </CartProductsList>
-      <p>Total price: ${calculateTotal()}</p>
+      <TotalPrice>Total price: ${calculateTotal().toFixed(2)}</TotalPrice>
     </CartProductsWrapper>
   );
 };
