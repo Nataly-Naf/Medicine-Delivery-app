@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Medicine-Delivery-app/static/css/main.859b2c52.css",
-    "main.js": "/Medicine-Delivery-app/static/js/main.93352ef2.js",
-    "static/js/266.e7c8c191.chunk.js": "/Medicine-Delivery-app/static/js/266.e7c8c191.chunk.js",
-    "static/js/276.14b0bc13.chunk.js": "/Medicine-Delivery-app/static/js/276.14b0bc13.chunk.js",
-    "static/js/681.65e314bb.chunk.js": "/Medicine-Delivery-app/static/js/681.65e314bb.chunk.js",
-    "static/js/210.e7ab08fc.chunk.js": "/Medicine-Delivery-app/static/js/210.e7ab08fc.chunk.js",
+    "main.js": "/Medicine-Delivery-app/static/js/main.ccc9f36b.js",
+    "static/js/507.7cdb5a3d.chunk.js": "/Medicine-Delivery-app/static/js/507.7cdb5a3d.chunk.js",
+    "static/js/374.17e9fa34.chunk.js": "/Medicine-Delivery-app/static/js/374.17e9fa34.chunk.js",
+    "static/js/322.5d7abda0.chunk.js": "/Medicine-Delivery-app/static/js/322.5d7abda0.chunk.js",
+    "static/js/743.eb2a58c4.chunk.js": "/Medicine-Delivery-app/static/js/743.eb2a58c4.chunk.js",
     "index.html": "/Medicine-Delivery-app/index.html",
     "main.859b2c52.css.map": "/Medicine-Delivery-app/static/css/main.859b2c52.css.map",
-    "main.93352ef2.js.map": "/Medicine-Delivery-app/static/js/main.93352ef2.js.map",
-    "266.e7c8c191.chunk.js.map": "/Medicine-Delivery-app/static/js/266.e7c8c191.chunk.js.map",
-    "276.14b0bc13.chunk.js.map": "/Medicine-Delivery-app/static/js/276.14b0bc13.chunk.js.map",
-    "681.65e314bb.chunk.js.map": "/Medicine-Delivery-app/static/js/681.65e314bb.chunk.js.map",
-    "210.e7ab08fc.chunk.js.map": "/Medicine-Delivery-app/static/js/210.e7ab08fc.chunk.js.map"
+    "main.ccc9f36b.js.map": "/Medicine-Delivery-app/static/js/main.ccc9f36b.js.map",
+    "507.7cdb5a3d.chunk.js.map": "/Medicine-Delivery-app/static/js/507.7cdb5a3d.chunk.js.map",
+    "374.17e9fa34.chunk.js.map": "/Medicine-Delivery-app/static/js/374.17e9fa34.chunk.js.map",
+    "322.5d7abda0.chunk.js.map": "/Medicine-Delivery-app/static/js/322.5d7abda0.chunk.js.map",
+    "743.eb2a58c4.chunk.js.map": "/Medicine-Delivery-app/static/js/743.eb2a58c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.859b2c52.css",
-    "static/js/main.93352ef2.js"
+    "static/js/main.ccc9f36b.js"
   ]
 }
