@@ -57,7 +57,7 @@ export const ShoppingCart = () => {
           </StyledItem>
         ))}
       </CartProductsList>
-      <p>Total: ${calculateTotal()}</p>
+      <p>Total price: ${calculateTotal()}</p>
     </CartProductsWrapper>
   );
 };

@@ -1,10 +1,17 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {
+  FormWrapper,
+  FormGroup,
+  Label,
+  Input,
+  ErrorMsg,
+  SubmitButton,
+} from './Form.styled.js';
 
 export const FormComponent = ({ handleSubmit }) => {
   return (
-    <div>
-      <h2>Checkout Form</h2>
+    <FormWrapper>
       <Formik
         initialValues={{ name: '', email: '', phone: '', address: '' }}
         validate={values => {
@@ -18,32 +25,32 @@ export const FormComponent = ({ handleSubmit }) => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <div>
-              <label htmlFor="name">Name</label>
-              <Field type="text" name="name" />
-              <ErrorMessage name="name" component="div" />
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <Field type="email" name="email" />
-              <ErrorMessage name="email" component="div" />
-            </div>
-            <div>
-              <label htmlFor="phone">Phone</label>
-              <Field type="text" name="phone" />
-              <ErrorMessage name="phone" component="div" />
-            </div>
-            <div>
-              <label htmlFor="address">Address</label>
-              <Field type="text" name="address" />
-              <ErrorMessage name="address" component="div" />
-            </div>
-            <button type="submit" disabled={isSubmitting}>
+            <FormGroup>
+              <Label htmlFor="name">Name</Label>
+              <Field as={Input} type="text" name="name" />
+              <ErrorMessage name="name" component={ErrorMsg} />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="email">Email</Label>
+              <Field as={Input} type="email" name="email" />
+              <ErrorMessage name="email" component={ErrorMsg} />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="phone">Phone</Label>
+              <Field as={Input} type="text" name="phone" />
+              <ErrorMessage name="phone" component={ErrorMsg} />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="address">Address</Label>
+              <Field as={Input} type="text" name="address" />
+              <ErrorMessage name="address" component={ErrorMsg} />
+            </FormGroup>
+            <SubmitButton type="submit" disabled={isSubmitting}>
               Submit
-            </button>
+            </SubmitButton>
           </Form>
         )}
       </Formik>
-    </div>
+    </FormWrapper>
   );
 };

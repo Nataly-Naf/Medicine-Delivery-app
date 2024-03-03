@@ -43,7 +43,7 @@ export default function CartPage() {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'flex-start', gap: '20px' }}>
       <FormComponent handleSubmit={handleSubmit} />
       <ShoppingCart />
     </div>
