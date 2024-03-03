@@ -6,13 +6,10 @@ export const AppBar = () => {
     <header className={css.header}>
       <nav>
         <NavLink className={css.link} to="/">
-          Home
+          Shops
         </NavLink>
-        <NavLink className={css.link} to="/catalog">
-          Catalog
-        </NavLink>
-        <NavLink className={css.link} to="/favorites">
-          Favorites
+        <NavLink className={css.link} to="/cart">
+          Shopping Cart
         </NavLink>
       </nav>
     </header>
